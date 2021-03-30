@@ -181,4 +181,54 @@ dispatch가 setstate와 비슷한 기능을한다. type으로 상태의 이름�
 
 
 
+### 자식요소에서 값을 읽고, 변경하면서 상태를 바꾸는것 
 
+
+```javascript
+import React, { useReducer, useContext } from "react";
+
+const ProfileDispatch = React.createContext(null);
+
+//내가 하고싶은것
+// 자식요소에서 값을 읽고,변경하고 상태를 바꾸는것.
+
+function SomeComponent() {
+  let [state, dispatch] = useContext(ProfileDispatch);
+  return (
+    <div>
+      <h1>{state.name}</h1>
+      <h3>{state.age}</h3>
+      <input
+        type="text"
+        onChange={(e) => {
+          dispatch({ type: "setName", name: e.target.value });
+        }}
+      ></input>
+    </div>
+  );
+}
+const INIT_STATE = { name: "영훈", age: 29 };
+function App() {
+  const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  return (
+    <div className="App">
+      <ProfileDispatch.Provider value={[state, dispatch]}>
+        <SomeComponent></SomeComponent>
+      </ProfileDispatch.Provider>
+    </div>
+  );
+}
+function reducer(state, action) {
+  switch (action.type) {
+    case "setName":
+      return { ...state, name: action.name };
+    case "setAge":
+      return { ...state, age: action.age };
+    default: {
+      return { ...state };
+    }
+  }
+}
+export default App;
+
+```

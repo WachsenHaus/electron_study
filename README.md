@@ -167,10 +167,14 @@ dispatch가 setstate와 비슷한 기능을한다. type으로 상태의 이름�
 커스텀훅의 상태값이 변경되면 그 커스텀훅을 사용하는 상위 컴포넌트도 새로운 상태값을 기반으로 함께 렌더링이된다.
 ![image](https://user-images.githubusercontent.com/59411545/113034557-2fba6500-91cd-11eb-8c98-8af5084474bf.png)  
 
-![image](https://user-images.githubusercontent.com/59411545/113035031-bbcc8c80-91cd-11eb-8176-f17c6c82ef1f.png)
+![image](https://user-images.githubusercontent.com/59411545/113035031-bbcc8c80-91cd-11eb-8176-f17c6c82ef1f.png)  
+![image](https://user-images.githubusercontent.com/59411545/113035451-372e3e00-91ce-11eb-97e9-ea59304dd4ab.png)
+
+![image](https://user-images.githubusercontent.com/59411545/113035494-3f867900-91ce-11eb-93e4-ffe6da8caf74.png)  
 
 
 
+![image](https://user-images.githubusercontent.com/59411545/113036162-e834d880-91ce-11eb-86e6-63af145b8257.png)  
 
 
 

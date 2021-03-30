@@ -110,3 +110,6 @@ function App() {
 
 export default App;
 ```
+
+### 컨텍스트 API를 사용한 상태관리
+![image](https://user-images.githubusercontent.com/59411545/113023738-e9f79f80-91c0-11eb-9408-f2a3b959196a.png)
